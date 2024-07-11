@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Thinakaran</title>
+    <link rel="stylesheet" href="aboutStyle.css">
+    <script src="aboutScript.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js" defer></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="topContainer" id="topContainer">
+            <div class="leftTopContainer" id="leftTopContainer">
+                <div class="nameSet" id="nameSet">
+                    <h1 class="name" id="name"><a href="Main.html">Thinakaran Manokaran</a></h1>
+                </div>
+            </div>
+            <button class="menuContainer" onclick="dropDown()" id="menuContainer">
+                <i class="fa-solid fa-ellipsis-vertical" id="menuIcon"></i>
+                <i class="fa-solid fa-xmark" id="closeIcon"></i>
+            </button>
+            <div class="rightTopContainer" id="rightTopContainer">
+                <a class="otherPages" id="otherPages" href="Main.html">Projects</a>
+                <a class="otherPages" id="otherPages" href="Play.html" >Play</a>
+                <a href="Resume.html" download="Thinakaran Manokaran Resume.html"  target="_blank" class="otherPages" id="resume-open">Resume</a>
+            </div>
+        </div>
+        
+        <div class="bottomContainer" id="bottomContainer">
+            <div class="aboutContainer" id="aboutContainer" data-aos="fade" data-aos-duration="2000">
+                <div class="loaderContainer">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                  </div>
+                  <div class="hidden"></div>
+                <div class="threeDContainer" id="threeDContainer"></div>
+                <div class="aboutContent" id="aboutContent">
+                    <div class="aboutSlide" id="aboutSlide">
+                        <div class="aboutHead" id="aboutHead">About mè</div>
+                        <div class="aboutCaption" id="aboutCaption">Hello! I'm Thinakran, a dedicated and versatile freelancer with over six years of experience in various domains including Excel, PowerPoint, Word, web development, and project management.</div>
+                        <div class="aboutCaption" id="aboutCaption">I am passionate about leveraging my skills to help individuals and businesses achieve their goals efficiently and effectively.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="experienceContainer" id="experienceContainer">
+                <ul class="experienceSlider" id="expeirinceSlider" data-aos="fade-up">
+                    <div class="aboutHead" id="aboutHead">Experience</div>
+                    <li class="aboutCaption expCaption" id="aboutCaption">With a diverse freelance background, I have over six years of experience across various domains. </li>
+                    <li class="aboutCaption expCaption" id="aboutCaption">As an Excel Specialist, I provided custom data solutions for four years.</li> 
+                    <li class="aboutCaption expCaption" id="aboutCaption"> I designed compelling presentations in PowerPoint for two years and delivered well-structured documents in Word for three years. </li>
+                    <li class="aboutCaption expCaption" id="aboutCaption">In web development, I created responsive, user-friendly websites for one year. Additionally, I completed over 40 project reports for students in the past six months, ensuring clarity and thoroughness.</li>
+                </ul>
+                <div class="playTimeContainer" id="playTimeContainer" data-aos="fade-up">
+                    <div class="gameName" id="gameName">Play-Time</div>
+                    <div class="playTime" id="playTime"></div>
+                    <button class="reset" id="reset" onclick="init()">Re-Arrange</button>
+                </div>
+                </div>
+            </div>
+            <div class="referenceContainer" id="referenceContainer" data-aos="fade-up" data-aos-duration="5000">
+                <div class="skillsContainer" id="skillsContainer">
+                    <div class="aboutHead skillHead" id="aboutHead">Skills</div>
+                    <div>
+                        <div class="aboutCaption skillList">1. Documentation</div>
+                        <div class="aboutCaption skillList">2. Design Thinking</div>
+                        <div class="aboutCaption skillList">3. Digital Marketing</div>
+                        <div class="aboutCaption skillList">4. Graphics Designing</div>
+                        <div class="aboutCaption skillList">5. Project Management</div>
+                        <div class="aboutCaption skillList">6. Web Development</div>
+                        <div class="aboutCaption skillList">7. UI/UX</div>
+                        <div class="aboutCaption skillList">8. Application Development</div>
+                    </div>
+                </div>
+                <div class="certificationContainer" id="certificationContainer">
+                    <div class="aboutHead" id="aboutHead">Certifications</div>
+                    <!-- <button class="previousButton" id="previousButton" onclick="moveLeft()" ><i class="fa-solid fa-angle-left" id="previousIcon"></i></button> -->
+                    <div class="certificateSlider" id="certificateSlider">
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/ciscoLogo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">cisco</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/Introduction_to_Data_Science_Badge20231101-29-hqdn2u_page-0001.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Data Science & Analysis</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton" onclick="addLike()">
+                                        <i class="fa-regular fa-heart" id="likeIcon"></i>
+                                        <i class="fa-solid fa-heart" id="likedIcon"></i>
+                                    </button>                                        
+                                    <button class="saveButton" id="saveButton" onclick="">
+                                        <i class="fa-regular fa-bookmark" id="saveIcon"></i>
+                                        <i class="fa-solid fa-bookmark" id="savedIcon"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.credly.com/badges/037f72c8-fa8a-4163-8ee2-dbfb4c17252d/print" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/Alison logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">alison</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/Excel Formulas and Functions Certificate_page-0001 (1).jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Excel Formulas</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton">
+                                        <i class="fa-regular fa-heart" id="likeIcon"></i>
+                                        <i class="fa-solid fa-heart" id="likedIcon"></i>
+                                    </button>                                        
+                                    <button class="saveButton" id="saveButton">
+                                        <i class="fa-regular fa-bookmark" id="saveIcon"></i>
+                                        <i class="fa-solid fa-bookmark" id="savedIcon"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <a href="https://alison.com/certification/check/2y10bHOo4FtTgst6BgNQnVaus9DLxXRxe1SIMpAVSKQqvUZ8RPobrm" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/udemy-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">udemy</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/udemy-excel.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Excel Advanced</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.udemy.com/certificate/UC-3ece4c5a-5ae6-4ef1-bcbc-027e99efcb1e/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/simplilearn-logo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">simpleilearn</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/design-thinking.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Design Thinking</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzgwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNTAwMzIyNF8xNzExOTk4MDc3LnBuZyIsInVzZXJuYW1lIjoiVGhpbmFrYXJhbiBNYW5vaGFyIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4299%2FDesign-Thinking-for-Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1331909114568478841&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVzygqNHTOTM6u9E4CADe8l84lAAAA" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/simplilearn-logo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">simpleilearn</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/digital-marketing.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Digital Marketing</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI5MDMiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl81MDU4MzE2XzE3MTM0Njg0MjUucG5nIiwidXNlcm5hbWUiOiJUaGluYWthcmFuIE1hbm9oYXIifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3059%2FDigital-Marketing-Strategy%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1331909114568478841&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVr4jMrMr3N82q9E4CAMRWNGIlAAAA" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/Alison logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">alison</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/graphic-design.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Graphic Designing</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://alison.com/certification/check/2y10Tl18JtjKlUPnb10VJrsxpO7OBK6oChElV9LkcgkcLW9ViIvfwu8kO" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/educba-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">educba</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/photoshop.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Photoshop</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.educba.com/certificate/?c=-882N3P3A" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/great-learning-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">greatlearning</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/project-management.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Project Management</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://olympus.mygreatlearning.com/courses/66443/certificate" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/mindluster-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">mindluster</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/Mindluster_Certificate_page-0001.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">HTML</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.mindluster.com/student/certificate/12362482864" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/data-flair-logo.jpeg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">dataflair</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/CSS-Certificate_Free-CSS-Course-with-Certificate-Hindi_Dheena_page-0001 (1).jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">CSS</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://data-flair.training/verify/7CAB37A494-7CA58DE7C5-736721C402/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/udemy-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">udemy</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/html & css.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">HTML & CSS Programme</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.udemy.com/certificate/UC-be63a170-ee82-492c-97bd-b4676d5ec4c6/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/udemy-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">udemy</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/javascript.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">JavaScript</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.udemy.com/certificate/UC-6e815f6c-e934-4360-8740-79e43769b899/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/scaler-topics-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">scalertopics</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/react-js.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">React JS</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://moonshot.scaler.com/s/li/bLqHDNTXBT" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/great-learning-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">greatlearning</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/ui-ux.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">UI / UX Development</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://olympus.mygreatlearning.com/courses/55928/certificate" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/ustoast-logo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">uxtoast</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/figma.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Figma</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.instagram.com/p/C58QJodL2XQ/?igsh=NHVyaDl0ZHJxd2Z5" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/coursera-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">coursera</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/wordpress.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">WordPress</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/5SM2MQ59VJHK" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/great-learning-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">greatlearning</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/wordpress with docker.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">WordPress with Docker</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://olympus.mygreatlearning.com/courses/56746/certificate" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/cursa-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">cursa</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/react-native-js.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">React Native JS</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://cursa.app/en/my-certificate/cert8a1cf3df9264754d0356950c919e0846/ok" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                    </div>
+                    <!-- <button class="nextButton" id="nextButton" onclick="nextButton()" ><i class="fa-solid fa-angle-right" id="nextIcon"></i></button> -->
+                    
+                    <div class="sliderDots" id="sliderDots">
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                        <div class="dot" id="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobileContainer" id="mobileContainer" data-aos="fade-up">
+                <div class="aboutHead" id="skillsetTitle">Skills & Certifications</div>
+
+                <div class="skillHolderMob" id="skillHolderMob" data-aos="fade-up">
+                    <div class="skillNameMob" id="skillNameMob">Data Analyst & App Developer</div>
+                    <div class="certificateSlider" id="certificateSlider">
+                        <div class="certificateSlides singleMob" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/ciscoLogo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">cisco</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/Introduction_to_Data_Science_Badge20231101-29-hqdn2u_page-0001.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Data Science & Analysis</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton" onclick="addLike()">
+                                        <i class="fa-regular fa-heart" id="likeIcon"></i>
+                                        <i class="fa-solid fa-heart" id="likedIcon"></i>
+                                    </button>                                        
+                                    <button class="saveButton" id="saveButton" onclick="">
+                                        <i class="fa-regular fa-bookmark" id="saveIcon"></i>
+                                        <i class="fa-solid fa-bookmark" id="savedIcon"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.credly.com/badges/037f72c8-fa8a-4163-8ee2-dbfb4c17252d/print" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides singleMob" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/cursa-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">cursa</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/react-native-js.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">React Native JS</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://cursa.app/en/my-certificate/cert8a1cf3df9264754d0356950c919e0846/ok" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="skillHolderMob" id="skillHolderMob" data-aos="fade-up">
+                    <div class="skillNameMob" id="skillNameMob">Front-End Developer</div>
+                    <div class="certificateSlider" id="certificateSlider">
+                        <div class="certificateSlides webDev" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/mindluster-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">mindluster</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/Mindluster_Certificate_page-0001.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">HTML</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.mindluster.com/student/certificate/12362482864" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides webDev" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/data-flair-logo.jpeg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">dataflair</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/CSS-Certificate_Free-CSS-Course-with-Certificate-Hindi_Dheena_page-0001 (1).jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">CSS</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://data-flair.training/verify/7CAB37A494-7CA58DE7C5-736721C402/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides webDev" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/udemy-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">udemy</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/html & css.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">HTML & CSS Programme</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.udemy.com/certificate/UC-be63a170-ee82-492c-97bd-b4676d5ec4c6/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides webDev" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/udemy-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">udemy</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/javascript.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">JavaScript</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.udemy.com/certificate/UC-6e815f6c-e934-4360-8740-79e43769b899/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides webDev" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/scaler-topics-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">scalertopics</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/react-js.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">React JS</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://moonshot.scaler.com/s/li/bLqHDNTXBT" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skillHolderMob" id="skillHolderMob" data-aos="fade-up">
+                    <div class="skillNameMob" id="skillNameMob">UI / UX Designer</div>
+                    <div class="certificateSlider" id="certificateSlider">
+                        <div class="certificateSlides uiUx" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/great-learning-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">greatlearning</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/ui-ux.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">UI / UX Development</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://olympus.mygreatlearning.com/courses/55928/certificate" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides uiUx" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/ustoast-logo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">uxtoast</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/figma.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Figma</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.instagram.com/p/C58QJodL2XQ/?igsh=NHVyaDl0ZHJxd2Z5" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides uiUx" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/coursera-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">coursera</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/wordpress.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">WordPress</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/5SM2MQ59VJHK" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides uiUx" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/great-learning-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">greatlearning</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/wordpress with docker.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">WordPress with Docker</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://olympus.mygreatlearning.com/courses/56746/certificate" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skillHolderMob" id="skillHolderMob" data-aos="fade-up">
+                    <div class="skillNameMob" id="skillNameMob">Project Management & Digital Marketor</div>
+                    <div class="certificateSlider" id="certificateSlider">
+
+                        <div class="certificateSlides projMang" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/simplilearn-logo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">simpleilearn</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/digital-marketing.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Digital Marketing</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI5MDMiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl81MDU4MzE2XzE3MTM0Njg0MjUucG5nIiwidXNlcm5hbWUiOiJUaGluYWthcmFuIE1hbm9oYXIifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3059%2FDigital-Marketing-Strategy%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1331909114568478841&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVr4jMrMr3N82q9E4CAMRWNGIlAAAA" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides projMang" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/great-learning-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">greatlearning</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/project-management.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Project Management</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://olympus.mygreatlearning.com/courses/66443/certificate" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="skillHolderMob" id="skillHolderMob" data-aos="fade-up">
+                    <div class="skillNameMob" id="skillNameMob">Graphic Designer & Design Thinking</div>
+                    <div class="certificateSlider" id="certificateSlider">
+
+                        <div class="certificateSlides graphDesign" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/Alison logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">alison</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/graphic-design.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Graphic Designing</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://alison.com/certification/check/2y10Tl18JtjKlUPnb10VJrsxpO7OBK6oChElV9LkcgkcLW9ViIvfwu8kO" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        
+                        <div class="certificateSlides graphDesign" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/educba-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">educba</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/photoshop.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Photoshop</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.educba.com/certificate/?c=-882N3P3A" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                        <div class="certificateSlides graphDesign" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/simplilearn-logo.jpg" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">simpleilearn</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/design-thinking.png" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Design Thinking</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzgwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNTAwMzIyNF8xNzExOTk4MDc3LnBuZyIsInVzZXJuYW1lIjoiVGhpbmFrYXJhbiBNYW5vaGFyIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4299%2FDesign-Thinking-for-Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1331909114568478841&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVzygqNHTOTM6u9E4CADe8l84lAAAA" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="skillHolderMob" id="skillHolderMob" data-aos="fade-up">
+                    <div class="skillNameMob" id="skillNameMob">Documentator</div>
+                    <div class="certificateSlider" id="certificateSlider">
+                        <div class="certificateSlides projMang" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/Alison logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">alison</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/Excel Formulas and Functions Certificate_page-0001 (1).jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Excel Formulas</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton">
+                                        <i class="fa-regular fa-heart" id="likeIcon"></i>
+                                        <i class="fa-solid fa-heart" id="likedIcon"></i>
+                                    </button>                                        
+                                    <button class="saveButton" id="saveButton">
+                                        <i class="fa-regular fa-bookmark" id="saveIcon"></i>
+                                        <i class="fa-solid fa-bookmark" id="savedIcon"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <a href="https://alison.com/certification/check/2y10bHOo4FtTgst6BgNQnVaus9DLxXRxe1SIMpAVSKQqvUZ8RPobrm" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+                        
+                        <div class="certificateSlides projMang" id="certificateSlides">
+                            <div class="certificateProvider" id="certificateProvider">
+                                <img src="assets/Certificates/Company Logo/udemy-logo.png" alt="" srcset="" class="companyLogo" id="companyLogo">
+                                <div class="companyName" id="companyName">udemy</div>
+                                <img src="assets/images/verified-tick.jpg" alt="" srcset="" class="verifiedTick">
+                            </div>
+                            <div class="certificateImageHolder" id="certificateImageHolder">
+                                <img class="certificateImage" id="certificateImage" src="assets/Certificates/udemy-excel.jpg" alt="" srcset="">
+                            </div>
+                            <div class="certificateTitleHolder" id="cerificateTitleHolder">
+                                <div class="certificateTitle" id="certificateTitle">Excel Advanced</div>
+                                <!-- <div class="responceHolder" id="responceHolder">
+                                    <button class="likeButton" id="likeButton"><i class="fa-regular fa-heart" id="likeIcon"></i></button>                                        
+                                    <button class="saveButton" id="saveButton"><i class="fa-regular fa-bookmark" id="saveIcon"></i></button>
+                                </div> -->
+                            </div>
+                            <a href="https://www.udemy.com/certificate/UC-3ece4c5a-5ae6-4ef1-bcbc-027e99efcb1e/" class="certificateReferance" id="certificateReferance">Reference link<i class="fa-solid fa-chevron-right"></i></i></a>
+                            <div class="certificateCaption" id="certificateCaption"></div>
+                        </div>
+
+                    </div>
+                </div>    
+            </div> 
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set up scene, camera, and renderer
+            const scene = new THREE.Scene();
+            const container = document.getElementById('threeDContainer');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(width, height);
+            container.appendChild(renderer.domElement);
+
+            renderer.setClearColor(0xffffff); // Black
+
+            // Add lights
+            const ambientLight = new THREE.AmbientLight(0x404040, 2); // Soft white light
+            scene.add(ambientLight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(1, 1, 1).normalize();
+            scene.add(directionalLight);
+
+            const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+            pointLight.position.set(10, 10, 10);
+            scene.add(pointLight);
+
+            // Load a 3D model
+            const loader = new THREE.GLTFLoader();
+            loader.load('eye_drone.glb', function(gltf) {
+                scene.add(gltf.scene);
+            }, undefined, function(error) {
+                console.error('An error happened', error);
+            });
+
+            // Position the camera
+            camera.position.z = 5;
+            camera.position.y = 2; // Adjust the y-position to create top space
+            camera.lookAt(0, 0, 0); // Ensure the camera is looking at the center of the scene
+
+            // OrbitControls for mouse interaction
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+            controls.dampingFactor = 0.25;
+            controls.screenSpacePanning = false;
+            controls.minDistance = 1;
+            controls.maxDistance = 500;
+            controls.maxPolarAngle = Math.PI / 1;
+
+            // Animate the scene
+            function animate() {
+                requestAnimationFrame(animate);
+                controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+                renderer.setSize(width, height);
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

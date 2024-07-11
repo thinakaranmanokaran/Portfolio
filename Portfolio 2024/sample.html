@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="slider">
+      <img src="assets/images/graphics/gd (2).jpg" alt="" srcset="" class="photo1" id="photoz">
+      <img src="assets/images/graphics/gd (3).jpg" alt="" srcset="" class="photo2" id="photoz">
+      <img src="assets/images/graphics/gdh (3).jpg" alt="" srcset="" class="photo3" id="photozh">
+    </div>
+
+    <div class="slider">
+      <img src="assets/images/graphics/gd (5).jpg" alt="" srcset="" class="photo1" id="photoz">
+      <img src="assets/images/graphics/gdh (4).jpg" alt="" srcset="" class="photo2" id="photozh">
+      <img src="assets/images/graphics/gd (6).jpg" alt="" srcset="" class="photo3" id="photoz">
+    </div>
+
+    <div class="slider">
+      <img src="assets/images/graphics/gdh (1).jpg" alt="" srcset="" class="photo1" id="photozh">
+      <img src="assets/images/graphics/gd (8).jpg" alt="" srcset="" class="photo2" id="photoz">
+      <img src="assets/images/graphics/gd (9).jpg" alt="" srcset="" class="photo3" id="photoz">
+
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container{
+    margin-top: 100px;
+    width: 350px;
+    height: 480px;
+    /* border:  2px solid #000; */
+    overflow: hidden;
+    justify-content: center;
+    /* box-shadow: inset 20px 20px 60px rgba(0, 255, 255, 0.5); */
+  }
+
+  .slider{
+    display: flex;
+    justify-content: center;
+    /* width: 480px; */
+  }
+
+  #photoz{
+    filter: grayscale(10);
+    transition: ease 0.5s;
+    height:150px;
+    width: 150px;
+    margin: 5px;
+  }
+
+  #photozh{
+    filter: grayscale(10);
+    transition: ease 0.5s;
+    height:150px;
+    width: 450px;
+    margin: 5px;
+  }
+
+  #photoz:hover, #photozh:hover{
+    filter: grayscale(0);
+    transition: ease 0.5s;
+  }
+
+  .photo1{
+    animation: backToForm1 1s forwards;
+  }
+
+  @keyframes backToForm1 {
+    0%{margin-left: 245px;}
+    100%{margin-left: 5px;}
+  }
+
+  .photo1:hover{
+    animation: comeToScreen1 1s forwards;
+  }
+
+  @keyframes comeToScreen1 {
+    0%{margin-left: 5px;}
+    100%{margin-left: 245px;}
+  }
+
+  .photo3{
+    animation: backToForm3 1s forwards;
+  }
+
+  @keyframes backToForm3 {
+    0%{margin-right: 245px;}
+    100%{margin-right: 5px;}
+  }
+
+  .photo3:hover{
+    animation: comeToScreen3 1s forwards;
+  }
+
+  @keyframes comeToScreen3 {
+    0%{margin-right: 5px;}
+    100%{margin-right: 245px;}
+  }
+</style>

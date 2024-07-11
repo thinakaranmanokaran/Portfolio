@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play | Thinakaran</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="playStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="playScript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="topicContainer">
+            <div class="playTitle" data-aos="fade-right">Part Time , Play Running !</div>
+            <img src="assets/images/InShot_20240709_145806175.jpg" alt="" class="detectiveImage">
+        </div>
+        <div class="partContainer">
+            <div class="playContainer">
+                <div class="playSubHead" data-aos="fade-up" data-aos-duration="1000">When I'm not developing, you can find me 💁‍♂️</div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div class="playCaption" >👼 Love to learn new Subjects</div>
+                    <div class="playCaption" >🥇 Passionate about cracking mathematical challenges</div>
+                    <div class="playCaption" >🏏 Enthusiastic cricket aficionado</div>
+                    <div class="playCaption" >🤠 Fan of Western film classics</div>
+                    <div class="playCaption" >🧘🏻 Have a Great Intrest in Exploring Detective Novels</div>
+                    <div class="playCaption" >🕵️‍♂️ I'm <b>Sherlock Holmes</b></div>
+                    <div class="playCaption" >🤔 Thiking , ☕ coffee , 🎨 Designing</div>
+                    <div class="playCaption" >🎮 like to play AAA Games !</div>
+                    <div class="playCaption" >✨ Listening Fairytale is a Heaven</div>
+                </div>
+            </div>
+            <div class="mobileContainer" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mobile" id="mobile">
+                    <div class="dynamicIsland" id="dynamicIsland"></div>
+                    <div id="time"></div>
+                    <div class="battery">
+                        <div class="percentage"></div>
+                    </div>
+                    <span class="widgets">
+                        <div class="weather">
+                            <div class="country">India</div>
+                            <div class="celcius">36°</div>
+                            <div class="details">🌞 Sunny</div>
+                            <div class="details">H:29° L:20°</div>
+                        </div>
+                        <div class="notes">
+                            <div class="day">Monday</div>
+                            <div class="date">29</div>
+                            <div class="note">Birthday 🧚‍♀️</div>
+                        </div>
+                    </span>
+                    <div class="appList">
+                        <div class="appName">Weather</div>
+                        <div class="appName">Calender</div>
+                    </div>
+                    <div class="listWidget">
+                        <div class="leftList">
+                            <div class="date" id="inNum">2</div>
+                            <div class="inName">Incompleted</div>
+                        </div>
+                        <div class="rightList">
+                            <input type="button" onclick="addList(this)" class="listAdd">
+                            <span class="listName">Maths Class</span>
+                            <input type="button" onclick="addList(this)" class="listAdd">
+                            <span class="listName">Shoe Delivery</span>
+                        </div>                       
+                    </div>
+                    <div class="appName listTitle">Notes</div> 
+                    <div class="apps">
+                        <div class="soloApps">
+                            <button class="app whatsapp" onclick="waOpen()"></button>
+                            <div class="appName">Whatsapp</div>
+                        </div>
+                        <div class="soloApps">
+                            <button class="app mail" onclick="mailOpen()"></button>
+                            <div class="appName">Mail</div>
+                        </div>
+                        <div class="soloApps">
+                            <button class="app linkedIn" onclick="inOpen()"></button>
+                            <div class="appName">Linkedin</div>
+                        </div>
+                        <div class="soloApps">
+                            <button class="app insta" onclick="instaOpen()" ></button>
+                            <div class="appName">Instagram</div>
+                        </div>
+                    </div>
+                    <div class="apps" id="appContainer">
+                        <div class="soloApps"><button onclick="phOpen()" class="app phone"></button></div>
+                        <div class="soloApps"><button onclick="smsOpen()" class="app messager"></button></div>
+                        <div class="soloApps"><button onclick="twitterOpen()" class="app music"></button></div>
+                        <a href="https://www.google.co.in" class="soloApps"><button class="app safari"></button></a>
+                    </div>
+                    <div class="lineCurrent"></div>
+                    <div class="backFilter" id="backFilter"></div>
+                    <div class="floatOpen" id="floatOpen">
+                        <div class="lineCOntainer"><button class="lineBar" onclick="floaClose()" title="close" ></button></div>
+                        <div class="profileDetails">
+                            <img class="profilePhoto" src="assets/images/dheena.jpeg" alt="" srcset="">
+                            <div class="profileName">
+                                <div class="username" id="username"></div>
+                                <div class="fullName" id="fullName"></div>
+                            </div>
+                        </div>
+                        <div class="refButtons">
+                            <a href="" id="profileButton" class="profileButton"></a>
+                            <div class="orText">(or)</div>
+                            <a href="" id="appOpenButton" class="appOpenButton"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="funContainer">
+            <img class="wolfImage" src="assets/images/1720202440312.jpg" alt="wolf of wall street image" srcset="" data-aos="fade-right" data-aos-duration="2000">
+            <div class="funTitle" data-aos="fade-left" data-aos-duration="2000">Fun Time, Freelancing</div>
+        </div>
+        <div class="uiuxContainer" data-aos="fade-up" data-aos-duration="1000">
+            <div class="uiuxForm">
+                <div class="uiuxHead">UI / UX Designing</div>
+                <ul class="uiuxCaptionContainer">
+                    <li class="uiuxCaption">Crafting intuitive interfaces that delight users</li>
+                    <li class="uiuxCaption">Designing seamless user experiences with a creative touch</li>
+                    <li class="uiuxCaption">Transforming ideas into engaging, user-friendly designs.</li>
+                    <li class="uiuxCaption">Making digital interactions smooth, simple, and stunning.</li>
+                    <li class="uiuxCaption">Blending creativity and usability in every design.</li>
+                    <li class="uiuxCaption">Elevating digital experiences through innovative UI/UX design.</li>
+                    <li class="uiuxCaption">Turning complex problems into elegant user experiences.</li>
+                </ul>
+            </div>
+            <div class="webChatContainer" >
+                <div class="chatMobile">
+                    <div class="nameSlider" id="nameSlider">
+                        <div class="companyName">Vibe Connect</div>
+                        <div class="companyCaption">Enter your Name :</div>
+                        <input type="text" id="inputName" required class="inputName">
+                        <button class="sendName" disabled onclick="openChat()" id="sendName">upload</button>
+                    </div>
+                    <div class="chatPage" id="chatPage">
+                        <div class="companyLogo">Vibe Connect</div>
+                        <div class="chatAppContainer">
+                            <div class="messages" id="messages"></div>
+                            <div class="messageInputContainer">
+                                <input type="text" name="" id="messageInput" class="messageInput">
+                                <button class="messageSend" onclick="sendMessage()"><img src="assets/images/send (1).png" class="sendIcon" alt="" srcset=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="graphicDesignerContainer" data-aos="fade-up" data-aos-duration="2000"> 
+            <div class="uiuxHead" id="gdHead">Graphic Designing</div>
+            <div class="imageSliderContainer">
+                <div class="slideContainer">
+                    <div class="slider">
+                      <img src="assets/images/graphics/gd (2).jpg" alt="" srcset="" class="photo1" id="photoz">
+                      <img src="assets/images/graphics/gd (3).jpg" alt="" srcset="" class="photo2" id="photoz">
+                      <img src="assets/images/graphics/gdh (3).jpg" alt="" srcset="" class="photo3" id="photozh">
+                    </div>
+                
+                    <div class="slider">
+                      <img src="assets/images/graphics/gd (5).jpg" alt="" srcset="" class="photo1" id="photoz">
+                      <img src="assets/images/graphics/gdh (4).jpg" alt="" srcset="" class="photo2" id="photozh">
+                      <img src="assets/images/graphics/gd (6).jpg" alt="" srcset="" class="photo3" id="photoz">
+                    </div>
+                
+                    <div class="slider">
+                      <img src="assets/images/graphics/gdh (1).jpg" alt="" srcset="" class="photo1" id="photozh">
+                      <img src="assets/images/graphics/gd (8).jpg" alt="" srcset="" class="photo2" id="photoz">
+                      <img src="assets/images/graphics/gd (9).jpg" alt="" srcset="" class="photo3" id="photoz">
+                
+                    </div>
+                  </div>
+            </div>
+            <div class="graphicDesignerForm">
+                <ul class="uiuxCaptionContainer">
+                    <li class="uiuxCaption">Making first impressions unforgettable with bold designs.</li>
+                    <li class="uiuxCaption">Pushing the boundaries of creativity in digital design.</li>
+                    <li class="uiuxCaption">Weaving together aesthetics and functionality.</li>
+                    <li class="uiuxCaption">Enhancing user experiences with thoughtfully designed interfaces.</li>
+                    <li class="uiuxCaption">Turning visions into visually compelling realities.</li>
+                    <li class="uiuxCaption">Designing with empathy to connect with users!</li>
+                    <li class="uiuxCaption">Bringing clarity to complex information through design.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="studyReportContainer" data-aos="fade-up" data-aos-duration="2000">
+            <div class="reportDetails">
+                <div class="uiuxHead">Report Writter</div>
+                <ul class="uiuxCaptionContainer">
+                    <li class="uiuxCaption">Showcasing research excellence through detailed reports.</li>
+                    <li class="uiuxCaption">Bridging the gap between data and decision-making.</li>
+                    <li class="uiuxCaption">Highlighting success stories with thorough documentation.</li>
+                    <li class="uiuxCaption">Turning research into readable, engaging reports.</li>
+                    <li class="uiuxCaption">Delivering detailed analysis with a focus on clarity.</li>
+                    <li class="uiuxCaption">Crafting reports that highlight key findings and recommendations.</li>
+                    <li class="uiuxCaption">Illuminating findings with clear, concise reporting.</li>
+                </ul>
+            </div>
+            <div class="reportMateriels">
+                <div class="studyMobile">
+                    <div class="folderNameContainer">
+                        <div class="folderName">Study Reports</div>
+                        <button class="sortList" onclick="changeList()">
+                            <i id="sortIcon" class="fa-solid fa-grip"></i>
+                            <i class="fa-solid fa-list" id="listIcon"></i>
+                        </button>
+                    </div>
+                    <div class="filesContainer" id="filesContainer">
+                        <a href="assets/documents/Certificate Locker Study Report.pdf" target="_blank" class="fileDataContainer" id="fileDataContainer">
+                            <img src="assets/images/filelogo.png" alt="" srcset="" class="filePhoto" id="filePhoto">
+                            <div class="fileDataName" id="fileDataName">Certificate Locker</div>
+                        </a>
+                        <a href="assets/documents/Hostel Attendence Study Report.pdf" target="_blank" class="fileDataContainer" id="fileDataContainer">
+                            <img src="assets/images/filelogo.png" alt="" srcset="" class="filePhoto" id="filePhoto">
+                            <div class="fileDataName" class="fileDataName">Hostel Management</div>
+                        </a>
+                        <a href="assets/documents/Smart Car Parking Study Report.pdf" target="_blank" class="fileDataContainer" id="fileDataContainer">
+                            <img src="assets/images/filelogo.png" alt="" srcset="" class="filePhoto" id="filePhoto">
+                            <div class="fileDataName" class="fileDataName">Smart Car Parking</div>
+                        </a>
+                        <a href="assets/documents/Street Light Study Report.pdf" target="_blank" class="fileDataContainer" id="fileDataContainer">
+                            <img src="assets/images/filelogo.png" alt="" srcset="" class="filePhoto" id="filePhoto">
+                            <div class="fileDataName" class="fileDataName">Street Light Management</div>
+                        </a>
+                        <a href="assets/documents/To Do Management System Study Report.pdf" target="_blank" class="fileDataContainer" id="fileDataContainer">
+                            <img src="assets/images/filelogo.png" alt="" srcset="" class="filePhoto" id="filePhoto">
+                            <div class="fileDataName" class="fileDataName">To Do List</div>
+                        </a>
+                        <a href="assets/documents/Smart Meter Study Report.pdf" target="_blank" class="fileDataContainer" id="fileDataContainer">
+                            <img src="assets/images/filelogo.png" alt="" srcset="" class="filePhoto" id="filePhoto">
+                            <div class="fileDataName" class="fileDataName">Smart Meter</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

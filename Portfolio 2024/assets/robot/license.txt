@@ -1,0 +1,11 @@
+Model Information:
+* title:	Robot_LG06 rigged and animated
+* source:	https://sketchfab.com/3d-models/robot-lg06-rigged-and-animated-74ce63b3ab0b4cba9ea6e353f4fd9a16
+* author:	Mahmoud.Moh (https://sketchfab.com/Mahmoud.Moh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Robot_LG06 rigged and animated" (https://sketchfab.com/3d-models/robot-lg06-rigged-and-animated-74ce63b3ab0b4cba9ea6e353f4fd9a16) by Mahmoud.Moh (https://sketchfab.com/Mahmoud.Moh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
