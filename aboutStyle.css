@@ -1413,7 +1413,7 @@ body::-webkit-scrollbar{
 
 @media(max-width: 360px){
     .name{
-        border: 2px solid #000;
+        /* border: 2px solid #000; */
         font-size: 24px;
         margin-left: 10px;
     }
