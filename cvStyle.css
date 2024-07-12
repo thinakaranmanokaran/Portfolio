@@ -470,7 +470,7 @@ button, i, a{
 
 @media (max-width: 360px){
     .profile-name{
-        border: 2px solid #000;
+        /* border: 2px solid #000; */
         width: 110%;
     }
 
