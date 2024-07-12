@@ -57,6 +57,7 @@ body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    cursor: url('./assets/images/icons8-cursor-32.png'), auto;
 }
 
 .container{
@@ -83,6 +84,7 @@ body::-webkit-scrollbar{
 .detectiveImage{
     width: 450px;
     height: 600px;
+    /* border: 2px solid #000; */
 }
 
 .playContainer{
@@ -91,12 +93,14 @@ body::-webkit-scrollbar{
 }
 
 .playTitle{
-    width: 40%;
+    width: 45%;
     font-family: SanFranciscoBold;
     font-size: 64px;
     margin-top: 240px;
     /* border: 2px solid #000; */
-    margin-right: 20%;
+    margin-right: 18%;
+    color: #45474B;
+    /* padding-right: 20px; */
 }
 
 .playSubHead{
@@ -301,6 +305,7 @@ body::-webkit-scrollbar{
     border: #E9B824 solid 2px;
     background-color: transparent;
     transition: ease-out 0.5s;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .listName{
@@ -334,6 +339,7 @@ body::-webkit-scrollbar{
     background-size: cover;
     border-radius: 15px;
     border: 0px;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .insta{
@@ -432,6 +438,7 @@ body::-webkit-scrollbar{
     /* transform: translateX(110%); */
     border: 0px;
     transition: ease 0.5s;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .lineBar:hover{
@@ -494,6 +501,7 @@ body::-webkit-scrollbar{
     font-family: SanFranciscoRoundedMedium;
     text-decoration: none;
     margin-bottom: 6px;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .orText{
@@ -512,6 +520,7 @@ body::-webkit-scrollbar{
     border-radius: 20px;
     font-family: SanFranciscoRoundedMedium;
     text-decoration: none;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .funContainer{
@@ -643,6 +652,7 @@ body::-webkit-scrollbar{
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .sendName:disabled{
@@ -715,6 +725,7 @@ body::-webkit-scrollbar{
     margin-left: 2px;
     margin-top: 2px;
     border: 0px;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .sendIcon{
@@ -945,6 +956,7 @@ body::-webkit-scrollbar{
     background: transparent;
     border-radius: 50%;
     border: 0px;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 #sortIcon{
@@ -970,6 +982,7 @@ body::-webkit-scrollbar{
     height: 150px;
     /* border: 2px solid #000; */
     text-decoration: none;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .fileDataContainer:hover{

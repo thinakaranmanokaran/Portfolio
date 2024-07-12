@@ -1409,56 +1409,56 @@ body::-webkit-scrollbar{
     .certificateSlides{
         width: 80%;
     }
+}
 
-    @media(max-width: 360px){
-        .name{
-            /* border: 2px solid #000; */
-            font-size: 24px;
-            margin-left: 10px;
-        }
-        
-        .leftTopContainer{
-            width: 280px !important;
-            /* border: 2px solid #000; */
-            margin: 0px;
-            /* padding-right: -40px; */
-        }
-        
-        .menuContainer{
-            margin-left: 16px;
-        }
+@media(max-width: 360px){
+    .name{
+        border: 2px solid #000;
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    
+    .leftTopContainer{
+        width: 280px !important;
+        /* border: 2px solid #000; */
+        margin: 0px;
+        /* padding-right: -40px; */
+    }
+    
+    .menuContainer{
+        margin-left: 16px;
+    }
 
-        .threeDContainer{
-            width: 100%;
-            /* border: 2px solid #000; */
-            /* margin-top: -60px; */
-            /* margin-bottom:60px; */
-        }
+    .threeDContainer{
+        width: 100%;
+        /* border: 2px solid #000; */
+        /* margin-top: -60px; */
+        /* margin-bottom:60px; */
+    }
 
-        .aboutSlide{
-            margin-left: -26px;
-            /* border-radius: 40px; */
-        }
+    .aboutSlide{
+        margin-left: -26px;
+        /* border-radius: 40px; */
+    }
 
-        .experienceSlider{
-            margin-left: -33px;
-        }
+    .experienceSlider{
+        margin-left: -33px;
+    }
 
-        .playTimeContainer{
-            margin-left: -40px;
-        }
+    .playTimeContainer{
+        margin-left: -40px;
+    }
 
-        .skillHolderMob{
-            margin-left: -26px;
-            padding-right: 30px;
-        }
+    .skillHolderMob{
+        margin-left: -26px;
+        padding-right: 30px;
+    }
 
-        .certificateSlides{
-            width: 110%;
-        }
+    .certificateSlides{
+        width: 110%;
+    }
 
-        .skillNameMob{
-            line-height: 1.5;
-        }
+    .skillNameMob{
+        line-height: 1.5;
     }
 }

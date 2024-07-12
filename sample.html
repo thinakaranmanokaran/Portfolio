@@ -2,114 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Chat App</title>
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database-compat.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <style>
+    /* Add some basic styles */
+    #messages {
+      height: 300px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .meta-info {
+      font-size: 0.8em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="slider">
-      <img src="assets/images/graphics/gd (2).jpg" alt="" srcset="" class="photo1" id="photoz">
-      <img src="assets/images/graphics/gd (3).jpg" alt="" srcset="" class="photo2" id="photoz">
-      <img src="assets/images/graphics/gdh (3).jpg" alt="" srcset="" class="photo3" id="photozh">
-    </div>
+  <div id="messages"></div>
+  <input type="text" id="inputName" placeholder="Your Name">
+  <input type="text" id="messageInput" placeholder="Type a message">
+  <button onclick="sendMessage()">Send</button>
+  <script>
+    document.addEventListener('DOMContentLoaded', loadMessages);
 
-    <div class="slider">
-      <img src="assets/images/graphics/gd (5).jpg" alt="" srcset="" class="photo1" id="photoz">
-      <img src="assets/images/graphics/gdh (4).jpg" alt="" srcset="" class="photo2" id="photozh">
-      <img src="assets/images/graphics/gd (6).jpg" alt="" srcset="" class="photo3" id="photoz">
-    </div>
+    function loadMessages() {
+      const messagesContainer = document.getElementById('messages');
+      messagesContainer.innerHTML = '';
 
-    <div class="slider">
-      <img src="assets/images/graphics/gdh (1).jpg" alt="" srcset="" class="photo1" id="photozh">
-      <img src="assets/images/graphics/gd (8).jpg" alt="" srcset="" class="photo2" id="photoz">
-      <img src="assets/images/graphics/gd (9).jpg" alt="" srcset="" class="photo3" id="photoz">
+      firebase.database().ref('messages').on('value', (snapshot) => {
+        messagesContainer.innerHTML = '';
+        const messages = snapshot.val();
+        for (const id in messages) {
+          const messageObj = messages[id];
+          const messageElement = document.createElement('div');
+          messageElement.textContent = messageObj.text;
+          messageElement.classList.add('message');
 
-    </div>
-  </div>
+          const metaInfoElement = document.createElement('div');
+          metaInfoElement.classList.add('meta-info');
+
+          const personNameElement = document.createElement('span');
+          personNameElement.textContent = messageObj.messangerName;
+          personNameElement.classList.add('personName');
+
+          const timestampElement = document.createElement('span');
+          timestampElement.textContent = messageObj.timestamp;
+          timestampElement.classList.add('timestamp');
+
+          metaInfoElement.appendChild(personNameElement);
+          metaInfoElement.appendChild(timestampElement);
+          messageElement.appendChild(metaInfoElement);
+          messagesContainer.appendChild(messageElement);
+        }
+
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      });
+    }
+
+    function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const messageText = messageInput.value.trim();
+      const messangerName = document.getElementById("inputName").value.trim();
+
+      if (messageText && messangerName) {
+        const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+        const messageObj = { text: messageText, timestamp: timestamp, messangerName: messangerName };
+
+        firebase.database().ref('messages').push(messageObj);
+        messageInput.value = '';
+      }
+    }
+  </script>
 </body>
 </html>
-
-<style>
-  body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .container{
-    margin-top: 100px;
-    width: 350px;
-    height: 480px;
-    /* border:  2px solid #000; */
-    overflow: hidden;
-    justify-content: center;
-    /* box-shadow: inset 20px 20px 60px rgba(0, 255, 255, 0.5); */
-  }
-
-  .slider{
-    display: flex;
-    justify-content: center;
-    /* width: 480px; */
-  }
-
-  #photoz{
-    filter: grayscale(10);
-    transition: ease 0.5s;
-    height:150px;
-    width: 150px;
-    margin: 5px;
-  }
-
-  #photozh{
-    filter: grayscale(10);
-    transition: ease 0.5s;
-    height:150px;
-    width: 450px;
-    margin: 5px;
-  }
-
-  #photoz:hover, #photozh:hover{
-    filter: grayscale(0);
-    transition: ease 0.5s;
-  }
-
-  .photo1{
-    animation: backToForm1 1s forwards;
-  }
-
-  @keyframes backToForm1 {
-    0%{margin-left: 245px;}
-    100%{margin-left: 5px;}
-  }
-
-  .photo1:hover{
-    animation: comeToScreen1 1s forwards;
-  }
-
-  @keyframes comeToScreen1 {
-    0%{margin-left: 5px;}
-    100%{margin-left: 245px;}
-  }
-
-  .photo3{
-    animation: backToForm3 1s forwards;
-  }
-
-  @keyframes backToForm3 {
-    0%{margin-right: 245px;}
-    100%{margin-right: 5px;}
-  }
-
-  .photo3:hover{
-    animation: comeToScreen3 1s forwards;
-  }
-
-  @keyframes comeToScreen3 {
-    0%{margin-right: 5px;}
-    100%{margin-right: 245px;}
-  }
-</style>

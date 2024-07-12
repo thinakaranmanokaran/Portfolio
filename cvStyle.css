@@ -54,6 +54,11 @@
     height: 100%;
     /* pointer-events: none; */
     overflow: scroll;
+    cursor: url('./assets/images/icons8-cursor-32.png'), auto;
+}
+
+button, i, a{
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .container {
@@ -87,12 +92,14 @@
 
 .profile-details {
     padding: 10px 0px 0px 20px;
+    /* border: #000000 2px solid; */
 }
 
 .profile-name {
     font-family: SanFranciscoBold;
     font-size: 24px;
     padding-bottom: 4px;
+    /* border: #000000 2px solid; */
 }
 
 .profile-designation {
@@ -101,6 +108,7 @@
     color: rgb(65, 63, 66, 0.6);
     font-size: 14px;
     padding-bottom: 10px;
+    /* border: #000000 2px solid; */
 }
 
 .profile-site {
@@ -224,12 +232,14 @@
     width: 100%;
     padding: 12px;
     margin-top: 50px;
+    /* border: #000000 2px solid; */
 }
 
 .headline {
     font-family: SanFranciscoRoundedBold;
     font-size: 20px;
     margin-bottom: 12px;
+    /* border: #000000 2px solid; */
 }
 
 .timeline-container {
@@ -245,18 +255,20 @@
 }
 
 .caption-container {
-    margin-left: 40px;
+    padding-left: 40px;
+    /* border: #000000 2px solid; */
 }
 
 .caption {
     font-family: CreatoMedium;
     font-size: 16px;
     margin-bottom: 10px;
+    /* border: #000000 2px solid; */
 }
 
 .list-container {
     display: flex;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .lists {
@@ -426,7 +438,7 @@
     }
 
     .profile-name{
-        /* border: 2px solid #000; */
+        border: 2px solid #000;
         font-size: 20px;
         padding-bottom: 6px;
     }
@@ -458,12 +470,12 @@
 
 @media (max-width: 360px){
     .profile-name{
-        /* border: 2px solid #000; */
-        width: 150%;
+        border: 2px solid #000;
+        width: 110%;
     }
 
     .profile-designation{
-        width: 180%;
+        width: 130%;
     }
 
     .profile-details{
@@ -474,11 +486,17 @@
         width: 70%;
     }
 
+    .response-container{
+        /* border: 2px solid #000; */
+        margin-right: 0px;
+    }
+
     .container{
         margin: 0px;
         margin-top: 10%;
-        margin-bottom: 20%;
+        margin-bottom: 30%;
         width: 100%;
+        /* border: 2px solid #000; */
     }
 
     .media-container{

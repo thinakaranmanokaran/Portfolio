@@ -39,7 +39,7 @@ body{
     /* scrollbar-width: 0; */
     /* -ms-overflow-style: none; */
     overflow: hidden;
-    cursor: url('./assets/images/icons8-cursor-32.png'), cell;
+    cursor: url('./assets/images/icons8-cursor-32.png'), auto;
 }
 
 ::selection{
@@ -285,6 +285,11 @@ body::-webkit-scrollbar{
         display: inline-flex !important;
         visibility: visible;
     }
+
+    .linkToProjects{
+        /* border: #000 2px solid; */
+        margin-left: 80%;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -329,6 +334,11 @@ body::-webkit-scrollbar{
     .leftTopContainer{
         width: 58% !important;
     }
+
+    .linkToProjects{
+        /* border: #000 2px solid; */
+        margin-left: 78%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -372,6 +382,11 @@ body::-webkit-scrollbar{
 
     .leftTopContainer{
         width: 56% !important;
+    }
+
+    .linkToProjects{
+        /* border: #000 2px solid; */
+        margin-left: 75%;
     }
 }
 
@@ -455,10 +470,17 @@ body::-webkit-scrollbar{
 
     .menuContainer{
         visibility: visible !important;
+        cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
     }
 
     .leftTopContainer{
         width: 88% !important;
+    }
+
+    .linkToProjects{
+        /* border: #000 2px solid; */
+        margin-left: 68%;
+        font-size: 13px;
     }
 }
 
@@ -531,6 +553,12 @@ body::-webkit-scrollbar{
     .designCaption, .trademark{
         font-size: 16px !important;
     }
+
+    .linkToProjects{
+        /* border: #000 2px solid; */
+        margin-left: 80%;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 475px) {
@@ -602,6 +630,25 @@ body::-webkit-scrollbar{
     .leftTopContainer{
         width: 86% !important;
     }
+
+    .linkToProjects{
+        /* border: #000 2px solid;  */
+        margin-left: 73%;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .rightTopContainer{
+        top: 60px;
+    }
+
+    .linkToProjects{
+        /* border: #000 2px solid;  */
+        margin-left: 70%;
+        font-size: 10px;
+    }
 }
 
 .projectsContainer{
@@ -624,6 +671,7 @@ body::-webkit-scrollbar{
     justify-content: center;
     box-sizing: border-box;
     animation: welcomeEfx 3s ease-in-out infinite ;
+    padding-bottom: 20px;
 }
 
 .projectScreenShot{
@@ -646,12 +694,24 @@ body::-webkit-scrollbar{
 }
 
 .projectCaption{
-    padding: 10px 20px 30px 20px;
+    padding: 10px 20px 20px 20px;
     font-family: SanFranciscoRoundedRegular;
     font-size: 16px;
     color: #000;
     line-height: 1.5;
     /* animation: welcomeInEfx 3s ease-in-out infinite ; */
+}
+
+.linkToProjects{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    font-family: SanFranciscoRoundedRegular;
+    font-size: 15px;
+    /* margin-left: 460px; */
+    color: #ffffff;
+    text-decoration: none;
+    cursor: url('assets/images/icons8-cursor-32\ \(1\).png'), auto;
 }
 
 .lastContainer{
