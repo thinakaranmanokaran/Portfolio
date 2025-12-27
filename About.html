@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/loogggooo.jpg">
     <title>About | Thinakaran</title>
-    <link rel="stylesheet" href="aboutStyle.css">
-    <script src="aboutScript.js" defer></script>
+    <link rel="stylesheet" href="styles/aboutStyle.css">
+    <script src="scripts/aboutScript.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js" defer></script>
@@ -20,7 +20,7 @@
         <div class="topContainer" id="topContainer">
             <div class="leftTopContainer" id="leftTopContainer">
                 <div class="nameSet" id="nameSet">
-                    <h1 class="name" id="name"><a href="Main">Thinakaran Manokaran</a></h1>
+                    <h1 class="name" id="name"><a href="/">Thinakaran Manokaran</a></h1>
                 </div>
             </div>
             <button class="menuContainer" onclick="dropDown()" id="menuContainer">
@@ -28,7 +28,7 @@
                 <i class="fa-solid fa-xmark" id="closeIcon"></i>
             </button>
             <div class="rightTopContainer" id="rightTopContainer">
-                <a class="otherPages" id="otherPages" href="Main">Projects</a>
+                <a class="otherPages" id="otherPages" href="/">Projects</a>
                 <a class="otherPages" id="otherPages" href="Play" >Play</a>
                 <a href="https://drive.google.com/file/d/15iArtVgLg84dY2Oodk5z9VK-kC2RzskF/view?usp=drive_link"  target="_blank" class="otherPages" id="resume-open">Resume</a>
             </div>
@@ -933,7 +933,7 @@
 
             // Load a 3D model
             const loader = new THREE.GLTFLoader();
-            loader.load('eye_drone.glb', function(gltf) {
+            loader.load('./models/eye_drone.glb', function(gltf) {
                 scene.add(gltf.scene);
             }, undefined, function(error) {
                 console.error('An error happened', error);
