@@ -67,4 +67,18 @@
 
 @theme {
     --font-creato: Creato, "sans-serif";
+
+    --color-light: #FBEFEF;
+    --color-dark: #1A1A1D;
+
+    --color-textlight: #FFF6E3;
+}
+
+body {
+    cursor: url("/src/assets/icons/darkmouse.png"), auto;
+    font-family: Creato, "sans-serif";
+}
+
+a{
+    cursor: url("/src/assets/icons/pointer.png"), pointer;
 }
